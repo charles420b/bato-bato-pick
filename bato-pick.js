@@ -1,5 +1,14 @@
 // JavaScript for bato-bato pick game
 
+// asks for user input using prompt()
+const playerSelection = prompt("Rock, Paper, or Scissors?");
+
+// getComputerChoice() function is put in a variable, declared globally, can be used with other functions
+const computerSelection = getComputerChoice();
+
+// displays computerSelection to console
+console.log(computerSelection)
+
 // makes computer pick randomly from an ['array', 'array',]
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
@@ -9,4 +18,3 @@ function getComputerChoice() {
 // returns one of the choices
     return choices[random];
 }
-
