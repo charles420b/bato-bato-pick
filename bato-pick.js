@@ -18,3 +18,22 @@ function getComputerChoice() {
 // returns one of the choices
     return choices[random];
 }
+
+// compare player/computerSelection, converts playerSelection.toLowerCase therefore being case insensitive
+function playRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
+
+    if (playerSelection === computerSelection) {
+        return "Neither Wins it's a TIE."
+    } else if (
+        playerSelection === 'rock' && computerSelection === 'scissors' ||
+        playerSelection === 'paper' && computerSelection === 'rock' ||
+        playerSelection === 'scissors' && computerSelection === 'paper'
+    ) {
+        return `Player Wins ${playerSelection} beats ${computerSelection}`
+    } else {
+        return `Computer Wins ${computerSelection} beats ${playerSelection}`
+    }
+}
+
+console.log(playRound(playerSelection, computerSelection));
